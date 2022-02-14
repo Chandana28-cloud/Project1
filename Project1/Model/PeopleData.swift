@@ -7,13 +7,8 @@
 
 import Foundation
 
-struct PeopleData: Decodable {
-    
-    let data: [Data1]
-}
-struct Data1: Decodable {
-    
-    let id: String
+struct PeopleData: Decodable, Equatable {
+    let id: Int
     let title: String
     let body: String
 }

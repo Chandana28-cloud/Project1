@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,  UpdateTheData {
 
     @IBOutlet weak var tableView: UITableView!
-    var tableData: [Data1]?
+    var tableData: [PeopleData]?
     var datamanager = dataManaging()
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    func updateData(_ peopleManaging: dataManaging, datareq1: [Data1]) {
+    func updateData(_ peopleManaging: dataManaging, datareq1: [PeopleData]) {
             tableData = datareq1
             self.tableView.reloadData()
         
@@ -42,7 +42,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"ReusableIdentifier", for: indexPath) as! DataCell
-        cell.Id.text = self.tableData?[indexPath.row].id
+        
+        cell.Id.text = String(self.tableData![indexPath.row].id)
         cell.Title.text = self.tableData?[indexPath.row].title
         cell.Body.text = self.tableData?[indexPath.row].body
         return cell

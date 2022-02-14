@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UpdateTheData {
-    func updateData(_ peopleManaging: dataManaging, datareq1: [Data1])
+    func updateData(_ peopleManaging: dataManaging, datareq1: [PeopleData])
     
 }
 
@@ -26,6 +26,7 @@ struct dataManaging {
                         return
                     }
                     if let safeData = data {
+                        print("the data is \(safeData)")
                         self.parsing(safeData)
                     }
                 }
@@ -36,8 +37,9 @@ struct dataManaging {
     func parsing(_ peopleJsonData : Data){
         let decoder = JSONDecoder()
         do {
-            let decodedData = try decoder.decode(PeopleData.self, from: peopleJsonData)
-            let datareq = decodedData.data
+            let decodedData = try decoder.decode([PeopleData].self, from: peopleJsonData)
+            let datareq = decodedData
+ 
             DispatchQueue.main.async {
             self.delegate?.updateData(self, datareq1: datareq)
             }
