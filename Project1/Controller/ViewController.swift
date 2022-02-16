@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let groupedDictionary = Dictionary(grouping: tableData!, by: {String($0.name.prefix(1))})
           //  let keys = groupedDictionary.keys.sorted()
             let nulvalue = [Data1]()
-        sections = sectionTitle.map{ Section(letter: $0, names: groupedDictionary[$0.uppercased()] ?? nulvalue)}
+        sections = sectionTitle.map{ Section(letter: $0, names: (groupedDictionary[$0.uppercased()] ?? nulvalue).sorted(by: { $0.name < $1.name }))}
         
             self.tableView.reloadData()
     }
