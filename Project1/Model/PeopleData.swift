@@ -17,3 +17,10 @@ struct Data1: Decodable {
     let name: String
     let email: String
 }
+
+struct Section {
+    
+    let letter: String
+    let names: [Data1]
+}
+
