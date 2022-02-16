@@ -42,9 +42,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"ReusableIdentifier", for: indexPath) as! DataCell
-        cell.Id.text = self.tableData?[indexPath.row].id
-        cell.Title.text = self.tableData?[indexPath.row].title
-        cell.Body.text = self.tableData?[indexPath.row].body
+        
+        cell.Id.text = String(self.tableData?[indexPath.row].id)
+        cell.Title.text = self.tableData?[indexPath.row].name
+        cell.Body.text = self.tableData?[indexPath.row].email
         return cell
     }
     

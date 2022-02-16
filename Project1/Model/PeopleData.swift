@@ -13,7 +13,7 @@ struct PeopleData: Decodable {
 }
 struct Data1: Decodable {
     
-    let id: String
-    let title: String
-    let body: String
+    let id: Int
+    let name: String
+    let email: String
 }

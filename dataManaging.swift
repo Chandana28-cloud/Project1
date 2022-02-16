@@ -14,7 +14,7 @@ protocol UpdateTheData {
 
 struct dataManaging {
     
-    let peopleurl = "https://gorest.co.in/public/v2/posts"
+    let peopleurl = "https://gorest.co.in/public/v1/users"
     var delegate: UpdateTheData?
     
     func fetchData() {
