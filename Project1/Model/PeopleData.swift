@@ -11,6 +11,7 @@ struct PeopleData: Decodable {
     
     let data: [Data1]
 }
+
 struct Data1: Decodable {
     
     let id: Int

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		ADEB3D9C27B6665300C49B81 /* PeopleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB3D9B27B6665300C49B81 /* PeopleData.swift */; };
 		ADEB3D9F27B6675E00C49B81 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB3D9D27B6675E00C49B81 /* DataCell.swift */; };
 		ADEB3DA027B6675E00C49B81 /* DataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADEB3D9E27B6675E00C49B81 /* DataCell.xib */; };
+		ADFC90A427BE2596009CCF01 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFC90A327BE2596009CCF01 /* ModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		ADEB3D9B27B6665300C49B81 /* PeopleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleData.swift; sourceTree = "<group>"; };
 		ADEB3D9D27B6675E00C49B81 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 		ADEB3D9E27B6675E00C49B81 /* DataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCell.xib; sourceTree = "<group>"; };
+		ADFC90A327BE2596009CCF01 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		ADEB3D9527B6636200C49B81 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ADFC90A327BE2596009CCF01 /* ModelController.swift */,
 				ADEB3D6827B62E6C00C49B81 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -243,7 +246,7 @@
 				};
 			};
 			buildConfigurationList = ADEB3D5C27B62E6C00C49B81 /* Build configuration list for PBXProject "Project1" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -300,6 +303,7 @@
 				ADEB3D9A27B6659800C49B81 /* dataManaging.swift in Sources */,
 				ADEB3D6527B62E6C00C49B81 /* AppDelegate.swift in Sources */,
 				ADEB3D6727B62E6C00C49B81 /* SceneDelegate.swift in Sources */,
+				ADFC90A427BE2596009CCF01 /* ModelController.swift in Sources */,
 				ADEB3D9C27B6665300C49B81 /* PeopleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
